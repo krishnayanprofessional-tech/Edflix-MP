@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Edflix • Learn brilliantly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Enhanced Desktop Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <div class="logo-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name brand-name-edflix">Edflix</span>
+            <span class="brand-subtitle">Learning Platform</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-nav">
+        <div class="nav-section-title">Main Menu</div>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item active" data-page="home">
+            <div class="nav-icon-wrapper">
+              <i class="fas fa-home"></i>
+            </div>
+            <span>Home</span>
+            <div class="active-indicator"></div>
+          </li>
+          <li class="nav-item" data-page="highschool">
+            <div class="nav-icon-wrapper">
+              <i class="fas fa-school"></i>
+            </div>
+            <span>High School</span>
+            <div class="active-indicator"></div>
+          </li>
+          <li class="nav-item" data-page="university">
+            <div class="nav-icon-wrapper">
+              <i class="fas fa-university"></i>
+            </div>
+            <span>University</span>
+            <div class="active-indicator"></div>
+          </li>
+          <li class="nav-item" data-page="videos">
+            <div class="nav-icon-wrapper">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <span>Video Lectures</span>
+            <div class="active-indicator"></div>
+          </li>
+          <li class="nav-item" data-page="materials">
+            <div class="nav-icon-wrapper">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <span>Study Materials</span>
+            <div class="active-indicator"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Enhanced Main Content -->
+    <main class="main-content" id="mainContent">
+      <!-- Dynamic content injected here -->
+    </main>
+  </div>
+
+  <!-- Floating ChatGPT Button (Mobile Only) -->
+  <button class="chatgpt-float-btn" id="chatgptFloatBtn" aria-label="Open AI Assistant">
+    <i class="fas fa-robot"></i>
+  </button>
+
+  <!-- Fixed Mobile Bottom Navigation (Mobile Only) -->
+  <nav class="mobile-bottom-nav" id="mobileNav">
+    <button class="mobile-nav-item active" data-page="home">
+      <div class="mobile-nav-icon">
+        <i class="fas fa-home"></i>
+      </div>
+      <span>Home</span>
+    </button>
+    <button class="mobile-nav-item" data-page="highschool">
+      <div class="mobile-nav-icon">
+        <i class="fas fa-school"></i>
+      </div>
+      <span>School</span>
+    </button>
+    <button class="mobile-nav-item" data-page="university">
+      <div class="mobile-nav-icon">
+        <i class="fas fa-university"></i>
+      </div>
+      <span>Uni</span>
+    </button>
+    <button class="mobile-nav-item" data-page="videos">
+      <div class="mobile-nav-icon">
+        <i class="fas fa-play-circle"></i>
+      </div>
+      <span>Videos</span>
+    </button>
+    <button class="mobile-nav-item" data-page="materials">
+      <div class="mobile-nav-icon">
+        <i class="fas fa-book-open"></i>
+      </div>
+      <span>Study</span>
+    </button>
+  </nav>
+
+  <!-- Floating AI Chat Window -->
+  <div class="chat-overlay" id="chatOverlay">
+    <div class="chat-window">
+      <div class="chat-window-header">
+        <div class="chat-window-title">
+          <i class="fas fa-robot"></i>
+          <span>AI Assistant</span>
+        </div>
+        <div class="chat-window-actions">
+          <button class="chat-action-btn" id="minimizeChat" title="Minimize">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button class="chat-action-btn" id="closeChat" title="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot">
+          <div class="message-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="message-content">
+            Hello! I'm your AI learning assistant. I can help you with any subject, explain complex concepts, solve problems, and more. What would you like to learn about today?
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input 
+          type="text" 
+          class="chat-input" 
+          id="chatInput" 
+          placeholder="Ask me anything..."
+          autocomplete="off"
+        >
+        <button class="send-btn" id="sendChatBtn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
