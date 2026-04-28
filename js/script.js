@@ -17,7 +17,7 @@
   let universityDept = null;
   let isChatOpen = false;
 
-  const OPENROUTER_API_KEY = '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';
+  const OPENROUTER_API_KEY = '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';
   const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
   const MODEL_NAME = 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free';
   const SITE_URL = window.location.origin || 'http://localhost';
